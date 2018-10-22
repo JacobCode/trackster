@@ -1,0 +1,231 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #202020;
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    
+}
+
+#top {
+    background: #3494e6; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #3494e6 0%, #ec6ead 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #3494e6 0%,#ec6ead 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #3494e6 0%,#ec6ead 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    display: flex;
+    flex-direction: column;
+}
+/* Header */
+#top .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#top .header .name {
+    padding: 30px;
+}
+#top .header .name h1 {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+.fa-headphones-alt {
+    color: white;
+    padding-left: 15px;
+}
+#top .header .form {
+    display: flex;
+    align-items: center;
+    max-height: 100px;
+}
+#top .header input {
+    font-size: 2rem;
+    border-radius: 20px;
+    margin-right: 15px;
+    padding: 5px;
+    border: none;
+    padding-left: 15px;
+    color: #5a5a5a;
+}
+#top .header input:focus {
+    outline: none;
+}
+#top .header .fa-search {
+    background: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    border: 2px solid white;
+    transition: all 0.4s ease-in-out;
+}
+#top .header .fa-search:hover {
+    cursor: pointer;
+    color: #3494e6;
+    background: white;
+    border-color: transparent;
+    transform: rotate(360deg);
+}
+/* Attributes */
+#top .attributes {
+    padding: 15px 25px;
+    background: #f7f7f7;
+    border-bottom: 2px solid #e5e5e5;
+    font-size: 1.5rem;
+}
+.attribute {
+    padding: 0;
+}
+/* Track List */
+#track-list {
+    background: white;
+}
+#track-list .track {
+    padding: 25px;
+    border-bottom: 2px solid #ededed;
+    display: flex;
+    align-items: center;
+}
+#track-list .track:hover {
+    background: #f7f7f7;
+    cursor: default;
+}
+#track-list .track div {
+    padding: 0;
+}
+#track-list .track img {
+    max-height: 80px;
+    max-width: 80px;
+}
+#track-list .track p {
+    font-size: 1.6rem;
+}
+#track-list .track p.art-name {
+    color: #3494e6;
+}
+#track-list .track p.artist {
+    font-weight: 400;
+    padding-right: 10px;
+}
+#track-list .track .play {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 15px;
+}
+#track-list .track .play a {
+    border: 2px solid #3494e6;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: #3494e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease-in-out;
+    text-decoration: none;
+}
+#track-list .track .play a i {
+    transition: color 0.5s ease-in-out;
+    color: #3494e6;
+}
+#track-list .track .play a:hover {
+    transform: rotate(360deg);
+    background: #3494e6;
+}
+#track-list .track .play a:hover i {
+    color: white;
+}
+.no-results {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3494e6;
+}
+.name {
+    padding-left: 15px;
+}
+#results {
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 30px;
+    color: #ec6ead;
+}
+
+@media screen and (max-width: 991px) {
+    p.hide-tablet {
+        display: none;
+    }
+    .art-name {
+        padding-right: 10px;
+    }
+    .name-container {
+        padding-right: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #top .header {
+        flex-direction: column;
+        justify-content: center;
+    }
+    #top .header .name {
+        padding: 30px 15px;
+    }
+    #top .header .name h1 {
+        text-align: center;
+    }
+    #top .header .form {
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+    #track-list .track .play {
+        padding: 0;
+        align-items: initial;
+    }
+    #track-list .track .play a {
+        min-width: 30px;
+        min-height: 30px;
+        max-height: 30px;
+        max-width: 30px;
+        font-size: 1.1rem;
+    }
+    .hide-mobile {
+        display: none;
+    }
+    .attributes {
+        padding: 15px !important;
+    }
+    .track {
+        padding: 15px 30px !important;
+        align-items: initial !important;
+    }
+    .track p {
+        margin: 0 !important;
+    }
+    .art-name {
+        padding: 0;
+        padding-right: 10px;
+        margin-left: 10px;
+    }
+    .name-container {
+        padding-right: 10px;
+    }
+    #track-list {
+        padding: 0;
+    }
+    .no-results h1 {
+        font-size: 2rem;
+    }
+}
