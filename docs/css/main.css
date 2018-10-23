@@ -22,42 +22,68 @@ body, html {
     background: -webkit-linear-gradient(-45deg, #3494e6 0%,#ec6ead 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg, #3494e6 0%,#ec6ead 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
+/* ********************************************************************** */
 .theme.yellow #top {
     background: #3494e6; /* Old browsers */
     background: -moz-linear-gradient(-45deg, #ffcf32 0%, #ef4343 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(-45deg, #ffcf32 0%,#ef4343 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg, #ffcf32 0%,#ef4343 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
+/* ********************************************************************** */
 .theme.teal #top {
     background: #30cfd0; /* Old browsers */
     background: -moz-linear-gradient(-45deg, #30cfd0 0%, #330867 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(-45deg, #30cfd0 0%,#330867 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg, #30cfd0 0%,#330867 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
+/* ********************************************************************** */
+.theme.red #top {
+    background: #00223E; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #00223E 0%, #FFA17F 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #00223E 0%,#FFA17F 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #00223E 0%,#FFA17F 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+/* ********************************************************************** */
 .theme.blue #top .header .fa-search:hover {
     color: #ec6ead;
 }
+/* ********************************************************************** */
 .theme.yellow #top .header .fa-search:hover {
     color: #ef4343;
 }
+/* ********************************************************************** */
 .theme.teal #top .header .fa-search:hover {
     color: #330867;
 }
+/* ********************************************************************** */
+.theme.red #top .header .fa-search:hover {
+    color: #FFA17F;
+}
+/* ********************************************************************** */
 .theme.blue .no-results h1 {
     background: -webkit-linear-gradient(#3494e6, #ec6ead);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+/* ********************************************************************** */
 .theme.yellow .no-results h1 {
     background: -webkit-linear-gradient(#ffcf32, #ef4343);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+/* ********************************************************************** */
 .theme.teal .no-results h1 {
     background: -webkit-linear-gradient(#30cfd0, #330867);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+/* ********************************************************************** */
+.theme.red .no-results h1 {
+    background: -webkit-linear-gradient(#00223E, #FFA17F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* ********************************************************************** */
 .theme.blue #track-list .track .play a {
     border-color: #3494e6;
     color: #3494e6;
@@ -91,6 +117,17 @@ body, html {
     background: #30cfd0;
 }
 /* ********************************************************************** */
+.theme.red #track-list .track .play a {
+    border-color: #FFA17F;
+    color: #FFA17F;
+}
+.theme.red  #track-list .track .play a i {
+    color: #FFA17F;
+}
+.theme.red  #track-list .track .play a:hover {
+    background: #FFA17F;
+}
+/* ********************************************************************** */
 .theme #track-list .track .play a:hover i {
     color: white;
 }
@@ -104,6 +141,9 @@ body, html {
 .theme.teal #track-list .track p.art-name {
     color: #30cfd0;
 }
+.theme.red #track-list .track p.art-name {
+    color: #FFA17F;
+}
 .theme.blue #results {
     color: #ec6ead;
 }
@@ -112,6 +152,9 @@ body, html {
 }
 .theme.teal #results {
     color: #330867;
+}
+.theme.red #results {
+    color: #00223E;
 }
 
 /* END THEMES */
@@ -321,8 +364,11 @@ body, html {
     .attributes {
         padding: 15px !important;
     }
+    .attr2 {
+        padding-left: 10px;
+    }
     .track {
-        padding: 15px 30px !important;
+        padding: 15px 30px 15px 40px !important;
         align-items: initial !important;
     }
     .track p {

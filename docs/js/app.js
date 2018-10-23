@@ -56,29 +56,15 @@ $(document).ready(function () {
         }
     });
     var randomColors = function() {
-        var colors = {
-            color1: {
-                left: '#30cfd0',
-                right: '#330867'
-            },
-            color2: {
-                left: '#3494e6',
-                right: '#ec6ead'
-            },
-            color3: {
-                left: '#ffcf32',
-                right: '#ef4343'
-            },
-        }
-
         var classes = {
             yellow: 'yellow',
             teal: 'teal',
-            blue: 'blue'
+            blue: 'blue',
+            red: 'red'
         }
 
         var color = Object.values(classes);
-        var randomNum = Math.floor(Math.random() * 3);
+        var randomNum = Math.floor(Math.random() * 4);
         var currentColor = color[randomNum];
 
         $('.theme').addClass(currentColor);
