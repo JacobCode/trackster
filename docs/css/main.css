@@ -104,6 +104,15 @@ body, html {
 .theme.teal #track-list .track p.art-name {
     color: #30cfd0;
 }
+.theme.blue #results {
+    color: #ec6ead;
+}
+.theme.yellow #results {
+    color: #ffcf32;
+}
+.theme.teal #results {
+    color: #330867;
+}
 
 /* END THEMES */
 
@@ -254,7 +263,6 @@ body, html {
     text-align: center;
     font-size: 1.8rem;
     padding: 30px;
-    color: #ec6ead;
     font-weight: 600;
 }
 .no-results h1 {
