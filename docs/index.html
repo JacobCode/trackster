@@ -23,29 +23,31 @@
     <script src="./js/app.js"></script>
 </head>
 <body>
-    <div class="container-fluid" id="top">
-        <div class="row header">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 name">
-                <h1>Trackster <i class="fas fa-headphones-alt"></i></h1>
+    <div class="theme">
+        <div class="container-fluid" id="top">
+            <div class="row header">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 name">
+                    <h1>Trackster <i class="fas fa-headphones-alt"></i></h1>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form">
+                    <input class="col-xs-8" id="search-input" placeholder="Search Music">
+                    <i class="fa fa-search col-xs-4" id="search-button"></i>
+                </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form">
-                <input class="col-xs-8" id="search-input" placeholder="Search Music">
-                <i class="fa fa-search col-xs-4" id="search-button"></i>
+            <div class="row attributes">
+                <div class="col-xs-1 col-sm-3 col-md-2 col-lg-2 attribute attr1 hide-mobile">Cover</div>
+                <div class="col-xs-5 col-sm-4 col-md-4 col-lg-4 attribute attr2">Song</div>
+                <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3 attribute attr3">Artist</div>
+                <div class="col-xs-2 col-sm-1 col-md-3 col-lg-3 attribute attr4">Listeners</div>
             </div>
         </div>
-        <div class="row attributes">
-            <div class="col-xs-1 col-sm-3 col-md-2 col-lg-2 attribute attr1 hide-mobile">Cover</div>
-            <div class="col-xs-5 col-sm-4 col-md-4 col-lg-4 attribute attr2">Song</div>
-            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3 attribute attr3">Artist</div>
-            <div class="col-xs-2 col-sm-1 col-md-3 col-lg-3 attribute attr4">Listeners</div>
+        <div class="container-fluid" id="track-list">
+            <!-- tracks -->
+            <div class="no-results">
+                <h1>Discover <br>& Search <br>Music 🎶</h1>
+            </div>
         </div>
+        <div class="container-fluid" id="results"></div>
     </div>
-    <div class="container-fluid" id="track-list">
-        <!-- tracks -->
-        <div class="no-results">
-            <h1>Discover <br>& Search <br>Music 🎶</h1>
-        </div>
-    </div>
-    <div class="container-fluid" id="results"></div>
 </body>
 </html>
