@@ -15,14 +15,102 @@ body, html {
 .container-fluid {
     
 }
-
-#top {
+/* THEMES */
+.theme.blue #top {
     background: #3494e6; /* Old browsers */
     background: -moz-linear-gradient(-45deg, #3494e6 0%, #ec6ead 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(-45deg, #3494e6 0%,#ec6ead 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg, #3494e6 0%,#ec6ead 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.theme.yellow #top {
+    background: #3494e6; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #ffcf32 0%, #ef4343 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #ffcf32 0%,#ef4343 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #ffcf32 0%,#ef4343 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.theme.teal #top {
+    background: #30cfd0; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #30cfd0 0%, #330867 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #30cfd0 0%,#330867 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #30cfd0 0%,#330867 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.theme.blue #top .header .fa-search:hover {
+    color: #ec6ead;
+}
+.theme.yellow #top .header .fa-search:hover {
+    color: #ef4343;
+}
+.theme.teal #top .header .fa-search:hover {
+    color: #330867;
+}
+.theme.blue .no-results h1 {
+    background: -webkit-linear-gradient(#3494e6, #ec6ead);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.theme.yellow .no-results h1 {
+    background: -webkit-linear-gradient(#ffcf32, #ef4343);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.theme.teal .no-results h1 {
+    background: -webkit-linear-gradient(#30cfd0, #330867);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.theme.blue #track-list .track .play a {
+    border-color: #3494e6;
+    color: #3494e6;
+}
+.theme.blue  #track-list .track .play a i {
+    color: #3494e6;
+}
+.theme.blue  #track-list .track .play a:hover {
+    background: #3494e6;
+}
+/* ********************************************************************** */
+.theme.yellow #track-list .track .play a {
+    border-color: #ef4343;
+    color: #ef4343;
+}
+.theme.yellow  #track-list .track .play a i {
+    color: #ef4343;
+}
+.theme.yellow  #track-list .track .play a:hover {
+    background: #ef4343;
+}
+/* ********************************************************************** */
+.theme.teal #track-list .track .play a {
+    border-color: #30cfd0;
+    color: #30cfd0;
+}
+.theme.teal  #track-list .track .play a i {
+    color: #30cfd0;
+}
+.theme.teal  #track-list .track .play a:hover {
+    background: #30cfd0;
+}
+/* ********************************************************************** */
+.theme #track-list .track .play a:hover i {
+    color: white;
+}
+
+.theme.blue #track-list .track p.art-name {
+    color: #3494e6;
+}
+.theme.yellow #track-list .track p.art-name {
+    color: #ef4343;
+}
+.theme.teal #track-list .track p.art-name {
+    color: #30cfd0;
+}
+
+/* END THEMES */
+
+#top {
     display: flex;
     flex-direction: column;
+    transition: background 0.4s ease-in-out;
 }
 /* Header */
 #top .header {
@@ -77,7 +165,6 @@ body, html {
 }
 #top .header .fa-search:hover {
     cursor: pointer;
-    color: #ec6ead;
     background: white;
     border-color: transparent;
     transform: rotate(360deg);
@@ -121,7 +208,6 @@ body, html {
     font-size: 1.6rem;
 }
 #track-list .track p.art-name {
-    color: #3494e6;
     font-weight: 600;
 }
 #track-list .track p.artist {
@@ -135,11 +221,10 @@ body, html {
     padding-right: 15px;
 }
 #track-list .track .play a {
-    border: 2px solid #3494e6;
+    border: 2px solid;
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    color: #3494e6;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,11 +233,9 @@ body, html {
 }
 #track-list .track .play a i {
     transition: color 0.5s ease-in-out;
-    color: #3494e6;
 }
 #track-list .track .play a:hover {
     transform: rotate(360deg);
-    background: #3494e6;
 }
 #track-list .track .play a:hover i {
     color: white;
@@ -163,7 +246,6 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #3494e6;
 }
 .name {
     padding-left: 15px;
@@ -176,9 +258,6 @@ body, html {
     font-weight: 600;
 }
 .no-results h1 {
-    background: linear-gradient(#3494e6, #ec6ead);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     line-height: 1.5;
     font-family: 'Permanent Marker', cursive;
     font-size: 5rem;
@@ -200,16 +279,22 @@ body, html {
     #top .header {
         flex-direction: column;
         justify-content: center;
+        padding: 15px;
     }
     #top .header .name {
         padding: 30px 15px;
     }
     #top .header .name h1 {
         text-align: center;
+        font-size: 4.5rem;
     }
     #top .header .form {
         justify-content: center;
         padding-bottom: 30px;
+    }
+    #top .header .form input {
+        font-size: 1.8rem;
+        margin-right: 15px;
     }
     #track-list .track .play {
         padding: 0;
@@ -245,6 +330,9 @@ body, html {
     }
     #track-list {
         padding: 0;
+    }
+    .no-results {
+        max-height: 50vh;
     }
     .no-results h1 {
         font-size: 3.5rem;

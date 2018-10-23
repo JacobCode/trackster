@@ -55,11 +55,34 @@ $(document).ready(function () {
             Trackster.searchTracks(inputValue);
         }
     });
-    $(window).on('scroll', function() {
-        if (window.pageYOffset == $('#top .attributes')[0].offsetTop) {
-            // var topHeight = $('#top')[0].clientHeight;
-            // $('#top .attributes').css('top', topHeight);
-            console.log('make fixed');
+    var randomColors = function() {
+        var colors = {
+            color1: {
+                left: '#30cfd0',
+                right: '#330867'
+            },
+            color2: {
+                left: '#3494e6',
+                right: '#ec6ead'
+            },
+            color3: {
+                left: '#ffcf32',
+                right: '#ef4343'
+            },
         }
-    })
+
+        var classes = {
+            yellow: 'yellow',
+            teal: 'teal',
+            blue: 'blue'
+        }
+
+        var color = Object.values(classes);
+        var randomNum = Math.floor(Math.random() * 3);
+        var currentColor = color[randomNum];
+
+        $('.theme').addClass(currentColor);
+        console.log(currentColor);
+    }
+    randomColors();
 });
